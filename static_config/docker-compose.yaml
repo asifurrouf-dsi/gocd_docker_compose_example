@@ -1,4 +1,4 @@
-# Previously Used  >> gocd/gocd-agent-alpine-3.6:v18.12.0 >> gocd/docker-gocd-agent-ubuntu-16.04
+# Previously Used  >> gocd/gocd-agent-alpine-3.6:v18.12.0 >> gocd/docker-gocd-agent-centos-7
 
 version: "2"
 services:
@@ -11,7 +11,7 @@ services:
       - '8154:8154'
 
   goagent_java:
-    image: gocd/docker-gocd-agent-centos-7
+    image: gocd/docker-gocd-agent-ubuntu-16.04
     links:
       - go-server
     environment:

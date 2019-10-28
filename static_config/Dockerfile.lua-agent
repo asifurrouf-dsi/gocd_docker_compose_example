@@ -1,4 +1,5 @@
-FROM gocd/gocd-agent-ubuntu-16.04:v18.12.0
+#FROM gocd/gocd-agent-ubuntu-16.04:v18.12.0
+FROM gocd/gocd-agent-ubuntu-16.04
 
 ENV DEBIAN_FRONTEND noninteractive
 

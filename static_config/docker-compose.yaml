@@ -18,7 +18,16 @@ services:
       AGENT_AUTO_REGISTER_KEY: '123456789abcdef'
       AGENT_AUTO_REGISTER_RESOURCES: 'java,python,test'
       GO_SERVER_URL: https://go-server:8154/go
-
+      
+  goagent_ubuntu:
+    image: gocd/gocd-agent-ubuntu-18.04:v19.9.0
+    links:
+      - go-server
+    environment:
+      AGENT_AUTO_REGISTER_KEY: '123456789abcdef'
+      AGENT_AUTO_REGISTER_RESOURCES: 'java,python,test'
+      GO_SERVER_URL: https://go-server:8154/go
+      
   goagent_lua:
     build:
       context: .
